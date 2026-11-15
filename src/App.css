@@ -1,0 +1,264 @@
+/* Main App */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #3478f6, #4b20e8);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.theme-toggle:hover {
+  background-color: #e5e5e5;
+}
+
+/* Blog Container */
+.blog-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  flex: 1;
+}
+
+/* Blog Posts */
+.blog-post {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h1,
+.blog-post h2 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.blog-post p {
+  line-height: 1.6;
+}
+
+/* Author and Date */
+.post-info {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Links */
+.read-more,
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #3478f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover,
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Buttons */
+.comments button,
+.submit-button {
+  background-color: #ffc107;
+  color: #222;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.comments button:hover,
+.submit-button:hover {
+  background-color: #e0a800;
+}
+
+/* Comments */
+.comments {
+  margin-top: 30px;
+}
+
+.comment-list {
+  margin-top: 30px;
+}
+
+.comment-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-item {
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+/* Contact Form */
+.contact-form {
+  margin-top: 25px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Footer */
+.footer {
+  background-color: #202631;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* DARK MODE */
+.app.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark .blog-post {
+  background-color: #242424;
+  color: #f5f5f5;
+}
+
+.dark .blog-post h1,
+.dark .blog-post h2 {
+  color: #ffffff;
+}
+
+.dark .post-info {
+  color: #cccccc;
+}
+
+.dark .comment-item {
+  background-color: #333333;
+  color: white;
+}
+
+.dark .form-group input,
+.dark .form-group textarea {
+  background-color: #333333;
+  color: white;
+  border-color: #666;
+}
+
+.dark .form-group input::placeholder,
+.dark .form-group textarea::placeholder {
+  color: #bbbbbb;
+}
+
+.dark .read-more,
+.dark .back-link {
+  color: #90b4ff;
+}
+
+.dark .success-message {
+  background-color: #214b31;
+  color: #d4edda;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .navbar {
+    gap: 15px;
+  }
+
+  .blog-container {
+    width: 95%;
+  }
+
+  .blog-post {
+    padding: 20px;
+  }
+
+  .theme-toggle {
+    margin-top: 10px;
+  }
+}
